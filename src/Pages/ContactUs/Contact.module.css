@@ -1,0 +1,256 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Loew';
+    font-style: normal;
+    /* font-weight: 500;
+    font-size: 37px; */
+    /* line-height: 52px; */
+    letter-spacing: 0.09em;
+    
+    /* animation-name: letterAnimation;
+  animation-duration: 4s; */
+}
+body,html{
+    background-image: url('./images/BG_RESURGENCE\ \(1\).png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    
+
+}
+.contactwrapper{
+    height: 100vh;
+    /* width: 100vw; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contactus{
+    min-height: 55%;
+    /* width: 100vw; */
+    justify-content: space-around;
+    height: auto;
+    align-items:flex-start;
+}
+.left{
+    flex-direction: column;
+    width: auto;
+    align-items: center;
+    justify-content: center;
+}
+.middle{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    /* margin-left: 4rem; */
+    max-height: 175px;
+}
+#team_member{
+    margin-bottom: 0;
+    color: #cccccc;
+}
+#post{
+    color: #e6e6e6;
+}
+#discover{
+    color: #ceb463;
+}
+#ourteam{
+    color: #808080;
+}
+.name,.discoverteam{
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
+}
+.name{
+    margin-bottom: 1.5rem;
+    /* margin-top: 1rem; */
+}
+.discoverteam{
+    padding-top: 1rem;
+}
+.details{
+    align-items: center;
+    justify-content: flex-start;
+    /* max-width: 210px; */
+    width: auto;
+    height: 318.98px;
+    min-height: 160px;
+    
+    /* position: relative;
+    top: 2rem; */
+    /* padding-top: 1rem;
+    padding-left: 1rem; */
+    /* margin: auto; */
+    /* flex-direction: column; */
+}
+#underline1,#underline2{
+    /* background-color: white;
+    color: white; */
+    width: fit-content;
+    
+    /* height: 5px; */
+}
+#underline1{
+    width: 88%;
+    padding: 0;
+    margin-top: 1rem;
+    margin-bottom: 0;
+    margin-left: 0;
+    justify-content: flex-start;
+    position: relative;
+    background: white;
+    height: 3px;
+    /* border: 1.5px solid white; */
+    border-radius: 5px;
+    left: 1rem;
+}
+#underline2{
+    width: 50%;
+    padding: 0;
+    margin: 3px;
+    margin-left: 0;
+    justify-content: flex-start;
+    position: relative;
+    left: 0;
+    border: 0.75px solid #ceb463    ;
+}
+.buttonwrapper{
+    align-items: center;
+    justify-content: center;
+    margin-left: 5rem;
+    /* margin-left: auto; */
+}
+.next{
+    background: transparent;
+}
+.nextbtn{
+    max-width: 25px;
+}
+.members{
+    max-height: 300px;
+    
+    /* max-width: 382px; */
+}
+.handles{
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    
+}
+#insta,#feed,#twitt{
+    text-decoration: none;
+    color: white;
+}
+.contactform{
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+}
+#msg,#mail{
+    background: transparent;
+    width: 100%;
+    padding: 0rem 1rem;
+    border: none;
+    border-color: transparent;
+    color: white;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 1; /* Firefox */
+  }
+#mail{
+    width: 85%;
+    height: 100%;
+    padding: 0rem 0rem;
+    outline: none;
+}
+#mail:focus{
+    border: none;
+}
+.message{
+    border: 2px solid white;
+    border-radius: 3.5px;
+    /* padding: 0rem 1rem; */
+    margin-bottom: 0.8rem;
+    max-width: 600px;
+    min-height: 85px;
+}
+.email{
+    border: 2px solid white;
+    border-radius: 3.5px;
+    padding: 0rem 1rem;
+    max-width: 600px;
+}
+#submitted{
+    display: block;
+    background: transparent;
+    border: none;
+    height: 100%;
+    color: white;
+    margin-left: auto;
+}
+.instagram,.feedback,.twitter{
+    min-width: 245px;
+    margin: 2px 0px;
+}
+.main{
+    flex-direction: row;
+}
+.bottom{
+    margin-top: 1rem;
+}
+
+.imageclass .members{
+    width: 230px;
+    height: 300px;
+    
+}
+
+
+
+@media only screen and (max-width: 575px) {
+    .details{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: fit-content;
+     
+    }
+    .main{
+        margin: 1rem 0rem;
+    }
+    .instagram,.feedback,.twitter{
+        min-width:fit-content;
+        margin: 4px 5px;
+    }
+    .handles{
+        display: flex ;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .bottom{
+       flex-direction: column-reverse;
+    }
+    #underline2{
+        width: 65%;
+    }
+    .imageclass .members{
+        width: 150px;
+        height: 190px;
+    }
+  }
+
+  /* @keyframes letterAnimation {
+    from {letter-spacing:20rem;}
+    to {background-color: 0.8rem;}
+  }
+  h2,span{
+    animation-name: letterAnimation;
+    animation-duration: 2s;
+  } */
