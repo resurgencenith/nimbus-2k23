@@ -1,0 +1,117 @@
+.homepage {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    user-select: none;
+    overflow: hidden;
+}
+
+.welcome {
+    width: 100%;
+    height: 100%;
+    padding: 10%;
+    overflow: hidden;
+}
+
+.character {
+    height: 80vh;
+    position: absolute;
+    bottom: 0;
+    right: 10%;
+}
+
+.welcomeText {
+    font-family: 'LoewBold';
+    color: white;
+}
+
+.clubName {
+    font-size: 40px;
+}
+
+.clubInfo {
+    font-family: 'LoewRegular';
+    margin-bottom: 40px;
+    font-size: 20px;
+}
+
+.playButton {
+    color: rgb(44, 227, 255);
+    font-size: 24px;
+    width: fit-content;
+    letter-spacing: 3px;
+    cursor: pointer;
+}
+
+.bottomBorder {
+    width: 50%;
+    height: 1px;
+    background-color: rgb(44, 227, 255);
+    margin-top: 5px;
+    transition: all 0.5s ease-in-out;
+}
+
+.playButton:hover .bottomBorder {
+    width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+    .clubName {
+        font-size: 32px;
+    }
+    .clubInfo {
+        font-size: 18px;
+    }
+    .playButton {
+        font-size: 22px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .character {
+        height: 70vh;
+    }
+    .clubName {
+        font-size: 28px;
+    }
+    .clubInfo {
+        font-size: 16px;
+    }
+    .playButton {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .character {
+        right: 5%;
+        height: 60vh;
+    }
+    .welcome {
+        padding: 10% 5%;
+    }
+}
+
+@media only screen and (max-width: 426px) {
+    .character {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 50vh;
+    }
+    .welcome {
+        padding: 10%;
+        flex-direction: row;
+    }
+    .welcomeText {
+        font-family: 'LoewBold';
+        color: white;
+        padding-bottom: 0px;
+        height: fit-content;
+    }
+    .clubInfo {
+        margin-bottom: 20px;
+    }
+}
