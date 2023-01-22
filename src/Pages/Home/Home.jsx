@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Navbar from '../../Components/Navbar'
 import styles from './Home.module.css'
 import Characters from '../../Characters';
+import {Link} from 'react-router-dom'
 
 export default function Home() {
     const [currentCharacter, setCharacter] = useState(0);
@@ -20,7 +21,7 @@ export default function Home() {
                 <div className={styles.welcomeText}>
                     <div className={styles.clubName}>RESURGENCE</div>
                     <div className={styles.clubInfo}>E-Sports Club</div>
-                    <div className={styles.playButton}>PLAY <div className={styles.bottomBorder}></div></div>
+                    <Link to='/events' className={styles.playButton}>PLAY <div className={styles.bottomBorder}></div></Link>
                 </div>
                 <img src={Characters[currentCharacter]} alt="character" className={styles.character} />
             </div>

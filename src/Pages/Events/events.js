@@ -10,7 +10,7 @@ const events = [
         playersperteam: "5",
         prize: "Rs.3500",
         poster: "19MmbiYqUuEOnKKZfPc7AK3rR3iJlnkY-",
-        background: "1oODyaVowxlJVak99SyUe1DnrZVbcEErK",
+        background: "../Events/Images/valoPoster.jpg",
 
     },
     {

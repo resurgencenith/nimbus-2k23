@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Navbar from '../../Components/Navbar';
 import styles from './Events.module.css';
 import events from './events';
+import { Link } from 'react-router-dom';
 
 export default function Events() {
     const [backgroundImage, setBgImage] = useState(null);
@@ -24,7 +25,7 @@ export default function Events() {
                         <div className={styles.heading}>TOURNAMENTS</div>
                         <div className={styles.name}>{selectedEvent?.name || ""}</div>
                         <div className={styles.description}>{selectedEvent?.description || ""}</div>
-                        <div className={styles.button}>MORE</div>
+                        <Link className={styles.button} to='/events/tournament' state={selectedEvent}   >MORE</Link>
                     </div>
                     <div className={styles.events}>
                         <div style={{

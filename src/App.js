@@ -10,6 +10,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Events from "./Pages/Events/Events.jsx";
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import TournamentInformation from "./Pages/Events/TounamentInformation";
 
 
 
@@ -30,6 +31,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/events" element={<Events />} />
+            <Route path="/events/tournament" element={<TournamentInformation />} />
           </Routes>
         }
       </div>
