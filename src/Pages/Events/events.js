@@ -9,8 +9,8 @@ const events = [
         category: "Team",
         playersperteam: "5",
         prize: "Rs.3500",
-        poster: "19MmbiYqUuEOnKKZfPc7AK3rR3iJlnkY-",
-        background: "../Events/Images/valoPoster.jpg",
+        poster: "https://ik.imagekit.io/jpnn4qofy/Resurgence_2k23/Rectangle_21-min.png?ik-sdk-version=javascript-1.4.3&updatedAt=1674421567496",
+        background: "https://ik.imagekit.io/jpnn4qofy/Resurgence_2k23/Rectangle_2__1_-compressed.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1674422102290",
 
     },
     {
@@ -23,8 +23,8 @@ const events = [
         category: "Team",
         playersperteam: "3",
         prize: "To be announced soon",
-        poster: "1WT2IGcIn7UKGc-rw0KvWZD1BjPkrmDkK",
-        background: "1FNWI-BtFzD1A_PhNaqkQkY12EI2hJPmZ",
+        poster: "https://ik.imagekit.io/jpnn4qofy/Resurgence_2k23/Rectangle_23-min.png?ik-sdk-version=javascript-1.4.3&updatedAt=1674421567374",
+        background: "https://ik.imagekit.io/jpnn4qofy/Resurgence_2k23/Rectangle_2__1_-compressed.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1674422102290",
 
     },
     {
@@ -37,8 +37,8 @@ const events = [
         category: "Solo",
         playersperteam: "1",
         prize: "None",
-        poster: "17cEmkLEyvleQ9SIHz_1Qm18aUGWVICck",
-        background: "1XfOlqdH30FK0famq8117UZ99gJrKTgPj",
+        poster: "https://ik.imagekit.io/jpnn4qofy/Resurgence_2k23/Rectangle_25-min.png?ik-sdk-version=javascript-1.4.3&updatedAt=1674421567431",
+        background: "https://ik.imagekit.io/jpnn4qofy/Resurgence_2k23/Rectangle_2__1_-compressed.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1674422102290",
 
     },
 ];

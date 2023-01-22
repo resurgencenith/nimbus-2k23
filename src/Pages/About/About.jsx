@@ -25,10 +25,10 @@ export default function About() {
                 </div>
                 <div className={styles.containerImg}>
                     <div className={styles.imgDiv}>
-                        <img id={styles.img2} className={styles.img} src={bg1} alt="" />
+                        <img  className={styles.img} src={bg1} alt="" />
                     </div>
                     <div className={styles.imgDiv}>
-                        <img id={styles.img1} className={styles.img} src={bg2} alt="" />
+                        <img  className={styles.img} src={bg2} alt="" />
                     </div>
                     <div className={styles.button}>
                         <a className={styles.prev}>❮</a>

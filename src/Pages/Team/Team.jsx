@@ -1,7 +1,7 @@
 import React from "react";
-import style from './Contact.module.css'
-import Button from 'react-bootstrap/Button';
+import style from './Team.module.css'
 import Navbar from "../../Components/Navbar";
+import Footer from "../../Components/Footer";
 
 export default function Contact() {
   return (
@@ -14,16 +14,14 @@ export default function Contact() {
               <img src="images/Rectange27.png" alt="" className={`img-fluid ${style.members}`} />
               <hr id={`${style.underline1}`} />
             </div>
-            {/* <div class="container" id="underline1">
-      
-                      </div> */}
+            
           </div>
           <div className={`${style.details} d-flex col-sm-7`}>
             <div className={`${style.main} d-flex`}>
               <div className={`${style.middle}   d-flex`}>
                 <div className={`${style.name} d-flex text-white`}>
                   <span>
-                    <h2 id={style.team_member}>SIDHARTH</h2>
+                    <h2 id={style.team_member}>Mohamod Uvesh</h2>
                   </span>
                   <span id={style.post}>SECRETARY</span>
                 </div>
@@ -43,7 +41,7 @@ export default function Contact() {
             </div>
           </div>
         </div>
-        <div className={`${style.bottom} container-fluid d-flex row`}>
+        {/* <div className={`${style.bottom} container-fluid d-flex row`}>
           <div className={`${style.handles} d-flex col-sm-5`}>
             <div className={`${style.instagram}`}>
               <a href="#" id={style.insta}>Instagram</a>
@@ -64,8 +62,9 @@ export default function Contact() {
               <button type="submit" id={style.submitted}>Send</button>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
+        <Footer/>
     </>
   )
 }

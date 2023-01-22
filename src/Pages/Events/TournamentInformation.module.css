@@ -49,7 +49,7 @@ h1{
     color: white;   
     /* text-align: center; */
 }
-h1,p,.tournamentDetails,.tournamentInfo{
+tournamentDetails,.tournamentInfo{
     margin-left: 50px;
     /* width: 80%; */
     /* font-family: 'Roboto'; */

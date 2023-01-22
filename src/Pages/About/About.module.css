@@ -17,46 +17,31 @@ body {
 }
 
 .about {
-    position: relative;
-    width: 45rem;
-
+    margin-left:5%
 }
 
-#img1 {
-    height: 17rem;
-    width: 12rem;
-}
-
-#img2 {
+.img {
     height: 18rem;
     width: 12rem;
 }
 
+
 #heading {
-    position: absolute;
-    width: 15rem;
-    height: 4rem;
     left: 1rem;
     color: white;
     letter-spacing: 0.03em;
 }
 
 .aboutDetails {
-    position: absolute;
-    width: 50rem;
-    height: 34rem;
-    left: 1rem;
-    top: 4rem;
+
     font-weight: 400;
     font-size: 16px;
-    line-height: 149.5%;
-    letter-spacing: 0.05em;
     color: #D5D5D5;
+    margin-top: 5%;
 }
 
 .container {
     display: flex;
-    justify-content: space-between;
     margin-left: 5%;
     margin-right:5%;
     margin-top:5%;
@@ -65,7 +50,8 @@ body {
 .containerImg {
     display: flex;
     align-items: flex-start;
-    margin-top:4%
+    margin-top:4%;
+    width: 200rem;
 }
 
 .button {
@@ -98,122 +84,35 @@ body {
 }
 
 .imgDiv {
-    position: relative;
     margin: 7px;
 }
 
-@media screen and (max-width:921px) {
+/* @media screen and (max-width:921px) {
     .about {
-        position: relative;
-        width: 45rem;
-        height: 46rem;
-        left: 2rem;
-        top: 5rem;
     }
 
     .aboutDetails {
-        position: absolute;
-        width: 35rem;
-        height: 34rem;
-        left: 0rem;
-        top: 4rem;
+        
     }
 
     #img1 {
-        height: 16rem;
-        width: 12rem;
     }
 
     #img2 {
-        height: 17rem;
-        width: 12rem;
     }
 
     .container {
-        display: flex;
-        flex-wrap: wrap;
     }
 
     .containerImg {
-        display: flex;
-        align-items: flex-start;
-        top: -15rem;
-        left: 2rem;
-        position: relative;
     }
 
     .button {
-        cursor: pointer;
-        top: 18rem;
-        left: 0rem;
-        position: relative;
-        color: #FFFFFF
     }
 
     .prev {
-        position: relative;
-        left: 31rem;
-        top: 49rem;
     }
 
     .next {
-        position: relative;
-        left: 41rem;
-        top: 49rem;
     }
-}
-
-@media screen and (max-width:546px) {
-
-    #img1 {
-        height: 16rem;
-        width: 11rem;
-    }
-
-    #img2 {
-        height: 17rem;
-        width: 11rem;
-    }
-
-    .aboutDetails {
-        position: absolute;
-        width: 19rem;
-        height: 34rem;
-        left: 0rem;
-        top: 4rem;
-    }
-
-    .container {
-        display: flex;
-        flex-wrap: wrap;
-
-    }
-
-    .containerImg {
-        display: flex;
-        align-items: flex-start;
-        top: 0rem;
-        left: 1rem;
-        position: relative;
-    }
-
-    .button {
-        cursor: pointer;
-        top: 18rem;
-        left: 1rem;
-        position: relative;
-        color: #FFFFFF
-    }
-
-    .prev {
-        position: relative;
-        left: -23rem;
-        top: -1rem;
-    }
-
-    .next {
-        position: relative;
-        left: -13rem;
-        top: -2.5rem;
-    }
-}
+} */

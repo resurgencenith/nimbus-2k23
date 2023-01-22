@@ -92,14 +92,17 @@ export default function Navbar() {
     }
     return (
         <div className={styles.navbar}>
-            <img src={logo} alt='logo' className={styles.logo} />
+            <div className={styles.logo_root}>
+
+                <img src={logo} alt='logo' className={styles.logo} />
+            </div>
             <div className={styles.navs} style={styleNavbar}>
-                <Link to='/'>
+                <Link to='/' style={{textDecoration:"none"}}>
                     <div className={styles.nav}>Home <div className={styles.border} style={{ backgroundColor: currentRoute === '/' ? 'white' : 'transparent' }}></div></div>
                 </Link>
-                <Link to='/about'><div className={styles.nav}>About <div className={styles.border} style={{ backgroundColor: currentRoute === '/about' ? 'white' : 'transparent' }}></div></div></Link>
-                <Link to='/events'><div className={styles.nav}>Events <div className={styles.border} style={{ backgroundColor: currentRoute === '/events' ? 'white' : 'transparent' }}></div></div></Link>
-                <Link to='/contact'><div className={styles.nav}>Contact <div className={styles.border} style={{ backgroundColor: currentRoute === '/contact' ? 'white' : 'transparent' }}></div></div></Link>
+                <Link to='/events' style={{textDecoration:"none"}}><div className={styles.nav}>Events <div className={styles.border} style={{ backgroundColor: currentRoute === '/events' ? 'white' : 'transparent' }}></div></div></Link>
+                <Link to='/team' style={{textDecoration:"none"}}><div className={styles.nav}>Team <div className={styles.border} style={{ backgroundColor: currentRoute === '/team' ? 'white' : 'transparent' }}></div></div></Link>
+                <Link to='/about'  style={{textDecoration:"none"}}><div className={styles.nav}>About <div className={styles.border} style={{ backgroundColor: currentRoute === '/about' ? 'white' : 'transparent' }}></div></div></Link>
             </div>
             <div className={styles.bars} style={bars} onClick={() => openNavbar()}>
                 <div className={styles.bar1} style={styleBar1}></div>
