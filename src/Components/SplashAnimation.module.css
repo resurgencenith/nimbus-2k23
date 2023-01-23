@@ -13,14 +13,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    transition: all 0.2s ease-in-out;
 }
+
 .logo_root_splash{
     z-index: 20;
     color: #000;
 }
 
 
+.o0{
 
+    opacity: 0;
+}
 .dNone{
     display: none;
 }

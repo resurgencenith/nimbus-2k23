@@ -100,7 +100,7 @@ export default function Navbar() {
                 <Link to='/' style={{textDecoration:"none"}}>
                     <div className={styles.nav}>Home <div className={styles.border} style={{ backgroundColor: currentRoute === '/' ? 'white' : 'transparent' }}></div></div>
                 </Link>
-                <Link to='/events' style={{textDecoration:"none"}}><div className={styles.nav}>Events <div className={styles.border} style={{ backgroundColor: currentRoute === '/events' ? 'white' : 'transparent' }}></div></div></Link>
+                <Link to='/events' style={{textDecoration:"none"}}><div className={styles.nav}>Events <div className={styles.border} style={{ backgroundColor: currentRoute === '/events'|| currentRoute==='/events/tournament' ? 'white' : 'transparent' }}></div></div></Link>
                 <Link to='/team' style={{textDecoration:"none"}}><div className={styles.nav}>Team <div className={styles.border} style={{ backgroundColor: currentRoute === '/team' ? 'white' : 'transparent' }}></div></div></Link>
                 <Link to='/about'  style={{textDecoration:"none"}}><div className={styles.nav}>About <div className={styles.border} style={{ backgroundColor: currentRoute === '/about' ? 'white' : 'transparent' }}></div></div></Link>
             </div>
