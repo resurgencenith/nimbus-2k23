@@ -33,6 +33,9 @@
     height: 100%;
     overflow-y: scroll;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
 }
 
@@ -40,55 +43,62 @@
     width: 100%;
     
     padding: 0 5%;
-    margin-bottom: 40px;
     display: flex;  
     flex-direction: column;
-    justify-content: start;
-    align-items: flex-start;
 
+}
+.data{
+    display: flex;
+    height: max-content;
+    justify-content: space-between;
+}
+.dataWithoutVideo{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
 }
 
 .events {
     width: 100%;
+    height: 55%;
     background-color: rgba(0, 0, 0, 0.5);
-    padding: 40px 5%;   
-    overflow-x: scroll;
-    overflow-y: hidden;
+    padding: 1% 5% 5%;   
     display: flex;
     justify-content: flex-start;
+    margin-top: 2%;
+    overflow: visible;
+    margin-bottom: 1%;
 }
 
 .event {
     max-width: 200px;
     min-width: 200px;
     border-radius: 10px;
-    margin: 0 20px;
+    margin: 0 30px;
     transition: all 0.25s ease-in-out;
-    cursor: pointer;
-    overflow-y: hidden;
+}
+.event:hover{
+    transform: scale(1.35);
 }
 
 .heading {
-    font-size: 24px;
-    width: fit-content;
+    font-size: 2.5em;
+    align-self: flex-end;
     color: white;
-    font-family: 'LoewMedium';
-    margin-top:2%;
-
+    font-family: 'LoewBold';
+    
 }
 
 .name {
     color: white;
-    font-size: 18px;
-    font-family: 'LoewRegular';
-    margin-top: 20px;
-    margin-bottom: 20px;
+    font-size: 2em;
+    font-family: 'LoewMedium';
+    margin-bottom: 2%;
 }
 
 .description {
-    width: 100%;
-    height: 75px;
-    color: white;
+    width: 70%;
+    color: #D4D4D4;
     font-family: 'LoewRegular';
     font-size: 13px;
 }
@@ -107,5 +117,9 @@
     text-decoration: none;
     color:black
 }
+.videoDiv{
+    margin:1%;
+}
+
 
 /* tournament css */

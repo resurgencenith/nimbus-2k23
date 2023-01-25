@@ -11,6 +11,7 @@ const events = [
         prize: "Rs.3500",
         poster: "https://ik.imagekit.io/jpnn4qofy/Resurgence_2k23/Rectangle_21-min.png?ik-sdk-version=javascript-1.4.3&updatedAt=1674421567496",
         background: "https://ik.imagekit.io/jpnn4qofy/Resurgence_2k23/Rectangle_2__1_-compressed.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1674422102290",
+        video:"https://www.youtube.com/embed/e_E9W2vsRbQ"
 
     },
     {
@@ -25,6 +26,8 @@ const events = [
         prize: "To be announced soon",
         poster: "https://ik.imagekit.io/jpnn4qofy/Resurgence_2k23/Rectangle_23-min.png?ik-sdk-version=javascript-1.4.3&updatedAt=1674421567374",
         background: "https://ik.imagekit.io/jpnn4qofy/Resurgence_2k23/Rectangle_2__1_-compressed.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1674422102290",
+        video:"https://www.youtube.com/embed/e_E9W2vsRbQ"
+
 
     },
     {
@@ -39,6 +42,8 @@ const events = [
         prize: "None",
         poster: "https://ik.imagekit.io/jpnn4qofy/Resurgence_2k23/Rectangle_25-min.png?ik-sdk-version=javascript-1.4.3&updatedAt=1674421567431",
         background: "https://ik.imagekit.io/jpnn4qofy/Resurgence_2k23/Rectangle_2__1_-compressed.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1674422102290",
+        video:"https://www.youtube.com/embed/e_E9W2vsRbQ"
+
 
     },
 ];

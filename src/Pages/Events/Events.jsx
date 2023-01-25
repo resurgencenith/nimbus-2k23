@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 export default function Events() {
   let [event, setEvent] = useState(events[0]);
 
-  
   return (
     <div className={styles.eventsPage}>
       <div className={styles.backDiv}>
@@ -18,48 +17,45 @@ export default function Events() {
         />
       </div>
       <div className={styles.mainDiv}>
+        <Navbar />
         <div className={styles.innerDiv}>
-          <Navbar />
           <div className={styles.eventInfo}>
-            <div className={styles.heading}>TOURNAMENTS</div>
-            <div className={styles.name}>{event?.name || ""}</div>
-            <div className={styles.description}>
-              {event?.description || ""}
-            </div>
-            <div className={styles.button}>
-                <Link
-                className={styles.button_link}
-                to="/events/tournament"
-                state={event}
-                >
-                MORE
-                </Link>
+            <div className={styles.heading}>ONGOING TOURNAMENTS</div>
+            <div className={styles.data}>
+              <div className={styles.dataWithoutVideo}>
+                <div className={styles.name}>{event?.name || ""}</div>
+                <div className={styles.description}>
+                  {event?.description || ""}
+                </div>
+              </div>
+              {/* <iframe
+                width="560"
+                height="210"
+                src={event?.video}
+                frameborder="0"
+                style={{marginTop:"2%"}}
+                allowFullScreen
+              ></iframe> */}
+              {/* <div className={styles.videoDiv}>
+
+              </div> */}
             </div>
           </div>
           <div className={styles.events}>
-            
-              {events.map((eventL, i) => (
-                <div
-                  className={styles.event}
-                  key={i}
-                  style={{
-                    transform:
-                      eventL?.name === event.name
-                        ? "scale(1.09)"
-                        : "scale(1)",
-                  }}
-                  onClick={() => {
-                    setEvent(eventL);
-                  }}
-                >
-                  <img
-                    src={eventL.poster}
-                    alt="poster"
-                    style={{ width: "100%",height:"50%" }}
-                  />
-                </div>
-              ))}
-            
+            {events.map((eventL, i) => (
+              <Link
+                className={styles.event}
+                key={i}
+                to="/events/tournament"
+                state={eventL}
+              >
+                <img
+                  src={eventL.poster}
+                  alt="poster"
+                  style={{ width: "100%", height: "90%" }}
+                />
+              </Link>
+            ))}
           </div>
         </div>
       </div>
