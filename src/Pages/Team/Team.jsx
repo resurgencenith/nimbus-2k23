@@ -21,7 +21,7 @@ export default function Contact() {
               <div className={`${style.middle}   d-flex`}>
                 <div className={`${style.name} d-flex text-white`}>
                   <span>
-                    <h2 id={style.team_member}>Mohamod Uvesh</h2>
+                    <h2 id={style.team_member}>Mohd. Uvesh</h2>
                   </span>
                   <span id={style.post}>SECRETARY</span>
                 </div>
