@@ -2,8 +2,12 @@ import React from "react";
 import style from './Team.module.css'
 import Navbar from "../../Components/Navbar";
 import Footer from "../../Components/Footer";
+import btn from './images/next.png';
+import derive from "./team";
 
 export default function Contact() {
+  
+
   return (
     <>
       <Navbar />
@@ -11,7 +15,7 @@ export default function Contact() {
         <div className={`${style.contactus} container-fluid row`}>
           <div className={`${style.left} d-flex col-sm-5`}>
             <div className={`fluid-container ${style.imageclass}`}>
-              <img src="images/Rectange27.png" alt="" className={`img-fluid ${style.members}`} />
+              <img src={derive[1].img} alt="" className={`img-fluid ${style.members}`} />
               <hr id={`${style.underline1}`} />
             </div>
             
@@ -27,21 +31,21 @@ export default function Contact() {
                 </div>
                 <div className={`${style.discoverteam} d-flex text-white`}>
                   <span id={style.discover}>D I S C O V E R
-                    <hr id="underline2" />
+                    <hr id={style.underline2} />
                   </span>
                   {/* <div class="container" id="underline2"></div> */}
-                  <span id="ourteam">OUR TEAM</span>
+                  <span id ={style.ourteam}>OUR TEAM</span>
                 </div>
               </div>
               <div className={`${style.buttonwrapper} d-flex`}>
                 <button className="btn btn-default next">
-                  <img src="" alt="" className={`${style.nextbtn}`} />
+                  <img src={btn} alt="" className={`${style.nextbtn}`} />
                 </button>
               </div>
             </div>
           </div>
         </div>
-        {/* <div className={`${style.bottom} container-fluid d-flex row`}>
+        <div className={`${style.bottom} container-fluid d-flex row`}>
           <div className={`${style.handles} d-flex col-sm-5`}>
             <div className={`${style.instagram}`}>
               <a href="#" id={style.insta}>Instagram</a>
@@ -62,7 +66,7 @@ export default function Contact() {
               <button type="submit" id={style.submitted}>Send</button>
             </div>
           </div>
-        </div> */}
+        </div>
       </div>
         <Footer/>
     </>
