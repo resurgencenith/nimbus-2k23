@@ -4,6 +4,7 @@ import styles from './About.module.css'
 import config from '../../config'
 import bg1 from '../About/Images/Rectangle 8.png'
 import bg2 from '../About/Images/Rectangle 9.png'
+import Footer from '../../Components/Footer'    
 
 
 export default function About() {
@@ -36,6 +37,7 @@ export default function About() {
                     </div>
                 </div>
             </div>
+                <Footer/>
         </div>
     )
 }

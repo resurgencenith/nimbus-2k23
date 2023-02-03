@@ -2,6 +2,7 @@ import React from "react";
 import style from './Team.module.css'
 import Navbar from "../../Components/Navbar";
 import Footer from "../../Components/Footer";
+import Member from "../../Components/Member";
 
 export default function Contact() {
   return (
@@ -11,7 +12,9 @@ export default function Contact() {
         <div className={`${style.contactus} container-fluid row`}>
           <div className={`${style.left} d-flex col-sm-5`}>
             <div className={`fluid-container ${style.imageclass}`}>
-              <img src="images/Rectange27.png" alt="" className={`img-fluid ${style.members}`} />
+            <Member/>
+
+              {/* <img src="images/Rectange27.png" alt="" className={`img-fluid ${style.members}`} /> */}
               <hr id={`${style.underline1}`} />
             </div>
             

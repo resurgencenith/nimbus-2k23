@@ -5,6 +5,7 @@ import IconGitHub from '../Assets/Media/Icons/github';
 import InstagramIcon from '../Assets/Media/Icons/instagram';
 import LInkedInIcon from '../Assets/Media/Icons/linkedin';
 import TwitterIcon from '../Assets/Media/Icons/twitter';
+import IconDiscord from '../Assets/Media/Icons/discord';
 
 
 export default function Footer() {
@@ -22,6 +23,9 @@ export default function Footer() {
         </div>
         <div className={style.iconVerticalNavbar}  onClick={()=> window.open(config.twitter, "_blank")}>
           <TwitterIcon />
+        </div>
+        <div className={style.iconVerticalNavbar}  onClick={()=> window.open(config.twitter, "_blank")}>
+          <IconDiscord />
         </div>
         
         

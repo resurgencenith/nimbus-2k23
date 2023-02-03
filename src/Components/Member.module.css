@@ -1,0 +1,82 @@
+:root {
+  --teamPrimary: #ffd700;
+  --teamSecondary: rgba(255, 240, 0, 0.8);
+}
+
+.member {
+  color: rgb(255, 255, 255);
+  width: 250px;
+  height: 350px;
+  border-radius: 5%;
+  background-color: rgba(0, 0, 0, 0.8);
+  
+  display: flex;
+  flex-direction: column;
+
+  transition: all 0.5s ease-in-out;
+
+}
+.member:hover{
+  transition: all 0.5s ease-in-out;
+  background-color: var(--teamSecondary);
+  
+}
+.inner {
+  padding-top: 30px;
+}
+.image {
+  width: 90%;
+  height: 200px;
+  border-radius: 5%;
+  background-color: rgb(255, 255, 255);
+  margin: auto;
+
+}
+.img{
+}
+.about:hover ~ .image {
+  transition: all 0.25 ease-in-out;
+}
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5%;
+  margin-bottom: 8%;
+}
+.inner_about{
+}
+.about:hover {
+}
+.name {
+  font-size: 1em;
+  font-family: "LoewBold";
+}
+.desc {
+  font-size: 0.9em;
+
+  font-family: "LoewRegular";
+}
+.social {
+  display: flex;
+  justify-content: center;
+  height: 28px;
+  background-color: var(--teamPrimary);
+  align-self: flex-end;
+
+  /* opacity: 0;
+  display: none; */
+  transition: all 0.5s ease-in-out;
+
+}
+.member:hover ~ .social {
+  opacity: 1;
+  display: flex;
+  transition: all 0.5s ease-in-out;
+}
+.social_link {
+  color:white;
+  width: 20px;
+  height: 24px;
+  margin-left: 5px;
+}
