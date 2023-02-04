@@ -3,8 +3,19 @@ import Navbar from '../../Components/Navbar'
 import styles from './Home.module.css'
 import Characters from '../../Characters';
 import {Link} from 'react-router-dom'
+// import VanillaTilt from '../../lib/vanilla-tilt.js';
+import VanillaTilt from 'vanilla-tilt';
 
 export default function Home() {
+    
+    VanillaTilt.init(document.getElementById("character"),{
+        max:25,
+        speed:400
+    })
+    VanillaTilt.init(document.getElementById("welcomeText"),{
+        max:5,
+        speed:40
+    })
     const [currentCharacter, setCharacter] = useState(0);
     useEffect(() => {
         setTimeout(() => {
@@ -18,12 +29,12 @@ export default function Home() {
         <div className={styles.homepage}>
             <Navbar />
             <div className={styles.welcome}>
-                <div className={styles.welcomeText}>
+                <div className={styles.welcomeText} id="welcomeText">
                     <div className={styles.clubName}>RESURGENCE</div>
                     <div className={styles.clubInfo}>E-Sports Club</div>
                     <Link to='/events' className={styles.playButton}>PLAY <div className={styles.bottomBorder}></div></Link>
                 </div>
-                <img src={Characters[currentCharacter]} alt="character" className={styles.character} />
+                <img src={Characters[currentCharacter]} alt="character" id="character" className={styles.character} />
             </div>
         </div>
     )

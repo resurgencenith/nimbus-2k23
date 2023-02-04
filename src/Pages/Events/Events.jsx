@@ -28,17 +28,7 @@ export default function Events() {
                   {event?.description || ""}
                 </div>
               </div>
-              {/* <iframe
-                width="560"
-                height="210"
-                src={event?.video}
-                frameborder="0"
-                style={{marginTop:"2%"}}
-                allowFullScreen
-              ></iframe> */}
-              {/* <div className={styles.videoDiv}>
-
-              </div> */}
+              
             </div>
           </div>
           <div className={styles.events}>

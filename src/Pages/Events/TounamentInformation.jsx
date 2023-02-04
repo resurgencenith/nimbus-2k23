@@ -7,11 +7,17 @@ import style from "./TournamentInformation.module.css";
 export default function TournamentInformation() {
   let location = useLocation();
   let event = location.state;
-  console.log(event);
   return (
     <>
+      <div className={style.backDivTournament}>
+        <img
+          src={event.background}
+          alt="BackgroundImage"
+          style={{ height: "100vh", minWidth: "100%", filter: "blur(10px)" }}
+        />
+      </div>
       <Navbar />
-      <div className={`${style.tournament}`}>
+      <div className={`${style.tournament}`} id="tournament">
         <div className={`${style.imgWrapper}`}>
           <img className={`${style.image}`} src={bg} alt="" />
           <span className={`${style.caption}`}>

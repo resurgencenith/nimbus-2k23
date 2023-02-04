@@ -3,6 +3,7 @@ import style from './Team.module.css'
 import Navbar from "../../Components/Navbar";
 import Footer from "../../Components/Footer";
 import Member from "../../Components/Member";
+import team from "./team.js";
 
 export default function Contact() {
   return (
@@ -12,7 +13,9 @@ export default function Contact() {
         <div className={`${style.contactus} container-fluid row`}>
           <div className={`${style.left} d-flex col-sm-5`}>
             <div className={`fluid-container ${style.imageclass}`}>
-            <Member/>
+            {/* <Member/> */}
+            <Member member={team.final_year[0]}/>
+
 
               {/* <img src="images/Rectange27.png" alt="" className={`img-fluid ${style.members}`} /> */}
               <hr id={`${style.underline1}`} />
@@ -67,6 +70,15 @@ export default function Contact() {
           </div>
         </div> */}
       </div>
+
+        {team.final_year.map((member,i)=>{
+          return(
+            <>
+             <Member key={i} member={member}/>
+            </>
+          )
+        })}
+
         <Footer/>
     </>
   )

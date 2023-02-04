@@ -7,7 +7,7 @@
   color: rgb(255, 255, 255);
   width: 250px;
   height: 350px;
-  border-radius: 5%;
+  border-radius: 20px;
   background-color: rgba(0, 0, 0, 0.8);
   
   display: flex;
@@ -18,7 +18,7 @@
 }
 .member:hover{
   transition: all 0.5s ease-in-out;
-  background-color: var(--teamSecondary);
+  background-color: rgba(0, 0, 0, 0.8);
   
 }
 .inner {
@@ -27,7 +27,7 @@
 .image {
   width: 90%;
   height: 200px;
-  border-radius: 5%;
+  border-radius: 20px;
   background-color: rgb(255, 255, 255);
   margin: auto;
 
@@ -41,8 +41,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 5%;
-  margin-bottom: 8%;
+  margin-top: 25px;
+  padding-bottom: 28px; 
 }
 .inner_about{
 }
@@ -58,20 +58,19 @@
   font-family: "LoewRegular";
 }
 .social {
+  position: relative;
   display: flex;
   justify-content: center;
   height: 28px;
   background-color: var(--teamPrimary);
   align-self: flex-end;
-
-  /* opacity: 0;
-  display: none; */
   transition: all 0.5s ease-in-out;
-
+  border-radius: 20px;
+  bottom:-50px;
 }
-.member:hover ~ .social {
-  opacity: 1;
-  display: flex;
+.member:hover ~ .social{
+  bottom:30px;
+  margin-bottom: 0px;
   transition: all 0.5s ease-in-out;
 }
 .social_link {
