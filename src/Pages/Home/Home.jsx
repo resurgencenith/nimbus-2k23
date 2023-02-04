@@ -1,41 +1,103 @@
-import React, { useEffect, useState } from 'react'
-import Navbar from '../../Components/Navbar'
-import styles from './Home.module.css'
-import Characters from '../../Characters';
-import {Link} from 'react-router-dom'
-// import VanillaTilt from '../../lib/vanilla-tilt.js';
-import VanillaTilt from 'vanilla-tilt';
+import React, { useEffect, useState } from "react";
+import Navbar from "../../Components/Navbar";
+import styles from "./Home.module.css";
+import Characters from "../../Characters";
+import { Link } from "react-router-dom";
+import VanillaTilt from "../../lib/vanilla-tilt.js";
+import rect from "../../Assets/Media/rect.svg";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import "animate.css";
 
 export default function Home() {
-    
-    VanillaTilt.init(document.getElementById("character"),{
-        max:25,
-        speed:400
-    })
-    VanillaTilt.init(document.getElementById("welcomeText"),{
-        max:5,
-        speed:40
-    })
-    const [currentCharacter, setCharacter] = useState(0);
-    useEffect(() => {
-        setTimeout(() => {
-            let i = currentCharacter;
-            if (i === (Characters.length - 1)) i = 0;
-            else i++;
-            setCharacter(i);
-        }, 2000)
-    }, [currentCharacter])
-    return (
-        <div className={styles.homepage}>
-            <Navbar />
-            <div className={styles.welcome}>
-                <div className={styles.welcomeText} id="welcomeText">
-                    <div className={styles.clubName}>RESURGENCE</div>
-                    <div className={styles.clubInfo}>E-Sports Club</div>
-                    <Link to='/events' className={styles.playButton}>PLAY <div className={styles.bottomBorder}></div></Link>
-                </div>
-                <img src={Characters[currentCharacter]} alt="character" id="character" className={styles.character} />
-            </div>
+  const [currentCharacter, setCharacter] = useState(0);
+  useEffect(() => {
+    VanillaTilt.init(document.getElementById("char"), {
+      max: 15,
+      speed: 200,
+      glare: true,
+      "max-glare": 1,
+    });
+  });
+  useEffect(() => {
+    let char1 = document.getElementById("char1");
+    let char2 = document.getElementById("char2");
+    let char3 = document.getElementById("char3");
+
+    let imgs = [char1, char2, char3];
+
+    setTimeout(() => {
+      setTimeout(() => {
+        for (let i = 0; i < Characters.length; i++) {
+          if (i === currentCharacter) {
+            imgs[i].classList.add("in");
+            imgs[i].classList.remove("out");
+            console.log(imgs[i] )
+        } else {
+            imgs[i].classList.remove("in");
+            imgs[i].classList.add("out");
+          }
+        }
+      }, 2000);
+      for (let i = 0; i < Characters.length; i++) {
+        if (i === currentCharacter) {
+          imgs[i].style.opacity = 1;
+        } else {
+          imgs[i].style.opacity = 0;
+        }
+      }
+      if (currentCharacter === Characters.length - 1) {
+        setCharacter(0);
+      } else {
+        setCharacter(currentCharacter + 1);
+      }
+    }, 4000); 
+  }, [currentCharacter]);
+  return (
+    <div className={styles.homepage}>
+      <Navbar />
+
+      <div className={styles.rect}>
+        <img className={styles.rectImg} src={rect} />
+      </div>
+      <div className={styles.welcome}>
+        <div className={styles.welcomeText} id="welcomeText">
+          <div className={styles.clubName}>RESURGENCE</div>
+          <div className={styles.clubInfo}>E-Sports Club</div>
+          <Link to="/events" className={styles.playButton}>
+            PLAY <div className={styles.bottomBorder}></div>
+          </Link>
         </div>
-    )
+        {/* <Carousel key={0} autoPlay={true} infiniteLoop={true} width="100%" height="50%">
+          <div>
+            <img alt="abhay" src={char2} />
+            <p className="legend">Legend 1</p>
+          </div>
+          <div>
+            <img alt="" src="https://source.unsplash.com/random" />
+            <p className="legend">Legend 2</p>
+          </div>
+        </Carousel> */}
+        <div className={styles.characterContainer} id="charr">
+          <img
+            src={Characters[currentCharacter]}
+            alt="character"
+            className={`${styles.character} charr`}
+            id="char1"
+          />
+          <img
+            src={Characters[currentCharacter]}
+            alt="character"
+            className={`${styles.character} charr`}
+            id="char2"
+          />
+          <img
+            src={Characters[currentCharacter]}
+            alt="character"
+            className={`${styles.character} charr`}
+            id="char3"
+          />
+        </div>
+      </div>
+    </div>
+  );
 }

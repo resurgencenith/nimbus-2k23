@@ -2,13 +2,18 @@ import React, { useEffect, useState } from 'react'
 import styles from './Navbar.module.css'
 import logo from '../Assets/Media/logo.png'
 import { Link, useLocation } from "react-router-dom"
+import VanillaTilt from '../lib/vanilla-tilt';
 
 export default function Navbar() {
     const location = useLocation();
-    const [currentRoute, setCurrentRoute] = useState('/')
     useEffect(() => {
+        VanillaTilt.init(document.getElementById("logo"),{
+            max:25,
+            speed:40000
+        })
         setCurrentRoute(location.pathname);
     }, [location])
+    const [currentRoute, setCurrentRoute] = useState('/')
     const [styleBar1, setStyleBar1] = useState({});
     const [styleBar2, setStyleBar2] = useState({});
     const [styleBar3, setStyleBar3] = useState({});
@@ -92,10 +97,10 @@ export default function Navbar() {
     }
     return (
         <div className={styles.navbar}>
-            <div className={styles.logo_root}>
+            <Link to='/' className={styles.logo_root} id="logo_root">
 
-                <img src={logo} alt='logo' className={styles.logo} />
-            </div>
+                <img src={logo} alt='logo' className={styles.logo} id="logo" />
+            </Link>
             <div className={styles.navs} style={styleNavbar}>
                 <Link to='/' style={{textDecoration:"none"}}>
                     <div className={styles.nav}>Home <div className={styles.border} style={{ backgroundColor: currentRoute === '/' ? 'white' : 'transparent' }}></div></div>

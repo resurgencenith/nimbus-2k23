@@ -1,3 +1,7 @@
+:root{
+    --playButton:#F03015;
+}
+
 .homepage {
     width: 100vw;
     height: 100vh;
@@ -16,10 +20,54 @@
 .character {
     height: 80vh;
     position: absolute;
-    bottom: 0;
+    bottom: -30px;
     right: 10%;
+    /* animation: backInLeft 2s linear infinite;
+    animation: backOutRight 2s linear infinite; */
+
+} 
+.in{
+    animation: backInLeft 2s linear infinite;
+}
+.out{
+    animation: backOutRight 2s linear infinite;
 }
 
+@keyframes backInLeft {
+    0% {
+      transform: translateX(-2000px) scale(0.7);
+      opacity: 0.7;
+    }
+  
+    80% {
+      transform: translateX(0px) scale(0.7);
+      opacity: 0.7;
+    }
+  
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  @keyframes backOutRight {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  
+    20% {
+      transform: translateX(0px) scale(0.7);
+      opacity: 0.7;
+    }
+  
+    100% {
+      transform: translateX(2000px) scale(0.7);
+      opacity: 0.7;
+    }
+  }
+
+.characterContainer{
+}
 .welcomeText {
     font-family: 'LoewBold';
     color: white;
@@ -36,27 +84,40 @@
 }
 
 .playButton {
-    color: rgb(44, 227, 255);
-    font-size: 24px;
+    color: var(--playButton);
+    font-size: 38px;
     width: fit-content;
     letter-spacing: 3px;
     cursor: pointer;
     text-decoration: none;
     display: block;
+    font-family: "LoewBold";
 }
 
+.playButton:hover{
+    color:var(--playButton);
+}
 
 .bottomBorder {
     width: 50%;
-    height: 1px;
-    background-color: rgb(44, 227, 255);
+    height: 4px;
+    background-color: var(--playButton);
     margin-top: 5px;
     transition: all 0.5s ease-in-out;
 }
 
 .playButton:hover .bottomBorder {
     width: 100%;
-    color:rgb(44, 227, 255);
+    color:var(--playButton);
+}
+
+.rect{
+    position: absolute;
+}
+.rectImg{
+    
+    /* backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); */
 }
 
 @media only screen and (max-width: 768px) {
@@ -68,7 +129,7 @@
     }
     .playButton {
         font-size: 22px;
-        color:rgb(44, 227, 255);
+        color:var(--playButton);
     }
 }
 

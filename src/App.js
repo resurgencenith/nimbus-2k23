@@ -19,7 +19,7 @@ function App() {
     let bgVideo = document.getElementById("bg_video")
     window.addEventListener("resize",()=>{  
       
-
+      if(bgVideo.style!="undefined"){
       if(window.innerWidth/window.innerHeight<1.85){
         bgVideo.style.height = "100vh"
         bgVideo.style.width = "auto"
@@ -30,6 +30,7 @@ function App() {
         bgVideo.style.marginLeft = "auto"
 
       }
+    }
     }
     ,true)
   }, []);
