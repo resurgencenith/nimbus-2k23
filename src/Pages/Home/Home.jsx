@@ -35,6 +35,9 @@ export default function Home() {
       scale:1.15,
       
     });
+    for(let i=0;i<chars.length;i++){
+      chars[i].load()
+    }
   });
 
 
@@ -80,9 +83,9 @@ export default function Home() {
 
       },500)
 
-      if(state.counter%2===0){
-
-      }
+      // if(state.counter%2===0){
+      //   imgs[]
+      // }
 
 
     }, config.splash_animation_time + config.char_change_time)
