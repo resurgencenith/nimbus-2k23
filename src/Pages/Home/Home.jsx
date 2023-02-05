@@ -1,57 +1,95 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../../Components/Navbar";
 import styles from "./Home.module.css";
-import Characters from "../../Characters";
+import "./Home.css";
+import chars from "../../Characters";
 import { Link } from "react-router-dom";
 import VanillaTilt from "../../lib/vanilla-tilt.js";
 import rect from "../../Assets/Media/rect.svg";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import "animate.css";
+import config from "../../config";
+
+
 
 export default function Home() {
-  const [currentCharacter, setCharacter] = useState(0);
+  const [state, setState] = useState({
+    currentCharacter: 0,
+    nextCharacter: 1,
+    counter:0,
+  });
+  console.log(state)
   useEffect(() => {
-    VanillaTilt.init(document.getElementById("char"), {
+    VanillaTilt.init(document.getElementById("img1"), {
       max: 15,
       speed: 200,
       glare: true,
       "max-glare": 1,
+      scale:1.15,
+      reset:false,
+
+    });
+    VanillaTilt.init(document.getElementById("img2"), {
+      max: 15,
+      speed: 200,
+      glare: true,
+      "max-glare": 1,
+      scale:1.15,
+      reset:false,
+      
     });
   });
+
+
   useEffect(() => {
-    let char1 = document.getElementById("char1");
-    let char2 = document.getElementById("char2");
-    let char3 = document.getElementById("char3");
-
-    let imgs = [char1, char2, char3];
-
+    let curr = document.getElementById("img1");
+    let next = document.getElementById("img2");
     setTimeout(() => {
-      setTimeout(() => {
-        for (let i = 0; i < Characters.length; i++) {
-          if (i === currentCharacter) {
-            imgs[i].classList.add("in");
-            imgs[i].classList.remove("out");
-            console.log(imgs[i] )
-        } else {
-            imgs[i].classList.remove("in");
-            imgs[i].classList.add("out");
-          }
-        }
-      }, 2000);
-      for (let i = 0; i < Characters.length; i++) {
-        if (i === currentCharacter) {
-          imgs[i].style.opacity = 1;
-        } else {
-          imgs[i].style.opacity = 0;
-        }
+      let i = state.currentCharacter;
+      let j = state.nextCharacter;
+
+      
+      if(i===chars.length-1){
+        j=0
       }
-      if (currentCharacter === Characters.length - 1) {
-        setCharacter(0);
-      } else {
-        setCharacter(currentCharacter + 1);
+      if(i>chars.length-1){
+        i=0
       }
-    }, 4000); 
-  }, [currentCharacter]);
+
+      
+      curr.classList.add("out")
+      next.classList.remove("d-none")
+      next.classList.add("in")
+      next.src = chars[j];
+      setTimeout(()=>{
+        next.classList.remove("in")
+        curr.classList.add("d-none")
+        curr.classList.remove("out")
+        curr.src = chars[i];
+
+        //swap the src
+        curr.src=next.src
+        curr.classList.remove("d-none")
+        next.classList.add("d-none")
+        
+
+        setState({
+          currentCharacter: i+1,
+          nextCharacter: j+1,
+          counter:state.counter+1
+        })
+
+      },500)
+
+      if(state.counter%2===0){
+
+      }
+
+
+    }, config.splash_animation_time + config.char_change_time)
+
+  }, [state.currentCharacter]);
+
+
   return (
     <div className={styles.homepage}>
       <Navbar />
@@ -79,22 +117,13 @@ export default function Home() {
         </Carousel> */}
         <div className={styles.characterContainer} id="charr">
           <img
-            src={Characters[currentCharacter]}
-            alt="character"
-            className={`${styles.character} charr`}
-            id="char1"
+            className={`${styles.character}`}
+            id="img1"
+            src={chars[0]}
           />
           <img
-            src={Characters[currentCharacter]}
-            alt="character"
-            className={`${styles.character} charr`}
-            id="char2"
-          />
-          <img
-            src={Characters[currentCharacter]}
-            alt="character"
-            className={`${styles.character} charr`}
-            id="char3"
+            className={`${styles.character} d-none`}
+            id="img2"
           />
         </div>
       </div>

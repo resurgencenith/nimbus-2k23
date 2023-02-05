@@ -2,6 +2,7 @@ import React from "react";
 import style from "./SplashAnimation.module.css";
 import anim from '../Assets/Animations/anim.mp4'
 import { useEffect } from "react";
+import config from "../config";
 
 export default function SplashAnimation() {
     useEffect(()=>{
@@ -14,7 +15,7 @@ export default function SplashAnimation() {
                 document.getElementById("splash_root").classList.add(style.dNone);
 
               },200)
-            }, 5000);
+            }, config.splash_animation_time)
             
          }, false);
     })
