@@ -20,6 +20,14 @@ a {
 }
 
 @font-face {
+    font-family: 'Futura';
+    src: url('./Assets/Fonts/futura.ttf')
+}
+@font-face {
+    font-family: 'FuturaLi';
+    src: url('./Assets/Fonts/futurali.ttf')
+}
+@font-face {
     font-family: 'LoewBold';
     src: url('./Assets/Fonts/Loew-Bold.otf')
 }

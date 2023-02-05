@@ -25,7 +25,6 @@ export default function Home() {
       glare: true,
       "max-glare": 1,
       scale:1.15,
-      reset:false,
 
     });
     VanillaTilt.init(document.getElementById("img2"), {
@@ -34,7 +33,6 @@ export default function Home() {
       glare: true,
       "max-glare": 1,
       scale:1.15,
-      reset:false,
       
     });
   });
@@ -67,10 +65,12 @@ export default function Home() {
         curr.src = chars[i];
 
         //swap the src
+        //the correct way shout be to add in class to add in to curr and out to next every alternate way. this is eay to do but not the correct way
+        //little jitters can be felt when change the source when the image is active
         curr.src=next.src
-        curr.classList.remove("d-none")
         next.classList.add("d-none")
-        
+        curr.classList.remove("d-none")
+
 
         setState({
           currentCharacter: i+1,
@@ -93,6 +93,7 @@ export default function Home() {
   return (
     <div className={styles.homepage}>
       <Navbar />
+      {/* <div className={styles.movingText}>{config.movingText}</div> */}
 
       <div className={styles.rect}>
         <img className={styles.rectImg} src={rect} />

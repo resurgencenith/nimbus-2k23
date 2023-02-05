@@ -6,11 +6,18 @@ import VanillaTilt from '../lib/vanilla-tilt';
 
 export default function Navbar() {
     const location = useLocation();
-    useEffect(() => {
+    useEffect(()=>{
         VanillaTilt.init(document.getElementById("logo"),{
             max:25,
-            speed:40000
+            speed:400,
+      scale:1.18,
+      glare: true,
+      "max-glare": 1,
+
         })
+
+    })
+    useEffect(() => {
         setCurrentRoute(location.pathname);
     }, [location])
     const [currentRoute, setCurrentRoute] = useState('/')
