@@ -35,9 +35,10 @@ export default function Home() {
       scale:1.15,
       
     });
-    for(let i=0;i<chars.length;i++){
-      chars[i].load()
-    }
+    // for(let i=0;i<chars.length;i++){
+    //   // chars[i].load()
+    //   chars[i]
+    // }
   });
 
 
@@ -128,6 +129,7 @@ export default function Home() {
           <img
             className={`${styles.character} d-none`}
             id="img2"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
           />
         </div>
       </div>
