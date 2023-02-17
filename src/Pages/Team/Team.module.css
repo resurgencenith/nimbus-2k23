@@ -21,21 +21,15 @@ body,html{
 
 }
 .contactwrapper{
-    height: 100vh;
-    /* width: 100vw; */
-    flex-direction: column;
+    
+    width: 100vw;
+    display: flex;
     justify-content: center;
-    align-items: center;
+    padding: 5%;
 }
-.contactus{
-    min-height: 55%;
-    /* width: 100vw; */
-    justify-content: space-around;
-    height: auto;
-    align-items:flex-start;
-}
+
 .left{
-    flex-direction: column;
+    display: flex;
     width: auto;
     align-items: center;
     justify-content: center;
@@ -46,7 +40,6 @@ body,html{
     justify-content: center;
     width: auto;
     /* margin-left: 4rem; */
-    max-height: 175px;
 }
 #team_member{
     margin-bottom: 0;
@@ -58,8 +51,8 @@ body,html{
 #discover{
     color: #ceb463;
 }
-#ourteam{
-    color: #808080;
+.ourTeam{
+    color: #ffffff;
 }
 .name,.discoverteam{
     justify-content: flex-start;
@@ -74,19 +67,12 @@ body,html{
     padding-top: 1rem;
 }
 .details{
-    align-items: center;
-    justify-content: flex-start;
     /* max-width: 210px; */
+    margin-top: 5%;
     width: auto;
-    height: 318.98px;
-    min-height: 160px;
-    
-    /* position: relative;
-    top: 2rem; */
-    /* padding-top: 1rem;
-    padding-left: 1rem; */
-    /* margin: auto; */
-    /* flex-direction: column; */
+    height: 20rem;
+    margin-left: 10%;
+
 }
 #underline1,#underline2{
     /* background-color: white;
@@ -254,3 +240,7 @@ body,html{
     animation-name: letterAnimation;
     animation-duration: 2s;
   } */
+
+  /*codepen*/
+
+  

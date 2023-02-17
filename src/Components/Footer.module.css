@@ -1,5 +1,6 @@
 .verticalNavbar {
     display: flex;
+    justify-content: center;
     color: #2CE3FF;
     text-decoration: none;
     height: max-content;
