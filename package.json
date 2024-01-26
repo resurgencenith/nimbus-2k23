@@ -1,5 +1,5 @@
 {
-  "name": "resurgance",
+  "name": "resurgence-nimbus-2k23",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -49,5 +49,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "main": "index.js",
+  "repository": "https://github.com/resurgencenith/nimbus-2k23",
+  "author": "abhaysood1793 <abhayasood99@gmail.com>",
+  "license": "MIT"
 }
